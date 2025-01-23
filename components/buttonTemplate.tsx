@@ -6,7 +6,7 @@ export function IndexButton() {
 
   return (
     <View style={styles.container}>
-      <Button title="Click me" onPress={() => router.push("/samplePage")} />
+      <Button title="Index Button" onPress={() => router.push("/")} />
     </View>
   );
 }
@@ -16,10 +16,21 @@ export function SampleButton() {
 
   return (
     <View style={styles.container}>
-      <Button title="Click me" onPress={() => router.push("/index")} />
+      <Button title="Sample Button" onPress={() => router.push("/samplePage")} />
     </View>
   );
 }
+
+export function FruitButton() {
+  const router = useRouter();
+
+  return (
+    <View style={styles.container}>
+      <Button title="Fruit List Button" onPress={() => router.push("/fruitList")} />
+    </View>
+  );
+}
+
 
 const styles = StyleSheet.create({
   container: {

@@ -1,11 +1,12 @@
 import { View, Text, StyleSheet } from "react-native";
-import { IndexButton } from "../components/buttonTemplate";
+import { FruitButton, SampleButton } from "../components/buttonTemplate";
 
 export default function Home() {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Welcome to my app</Text>
-      <IndexButton />
+      <Text style={styles.title}>Welcome to my app. (Index Page)</Text>
+      <SampleButton />
+      <FruitButton />
     </View>
   );
 }

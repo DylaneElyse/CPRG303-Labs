@@ -6,7 +6,11 @@ import { Stack } from "expo-router";
 import { View, StyleSheet } from "react-native";
 
 export default function Layout() {
-  return <Stack screenOptions={{ headerShown: true }} />;
+  return (
+  <Stack screenOptions={{ headerShown: true }} >
+    {/* <Stack.Screen name="fruits"></Stack.Screen> */}
+  </Stack>
+  );
 }
 
 const styles = StyleSheet.create({

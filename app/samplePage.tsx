@@ -1,11 +1,13 @@
 import { View, Text, StyleSheet } from "react-native";
-import { SampleButton } from "../components/buttonTemplate";
+import { FruitButton, IndexButton } from "../components/buttonTemplate";
+import { Link } from "expo-router";
 
 export default function samplePage() {
   return (
     <View style={styles.container}>
-      <Text>Page 2</Text>
-      <SampleButton />
+      <Text>Page 2 (samplePage)</Text>
+      <IndexButton />
+      <FruitButton />
     </View>
   );
 }
