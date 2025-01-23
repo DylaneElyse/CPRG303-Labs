@@ -2,6 +2,7 @@
   "expo": {
     "name": "test-app-typescript",
     "slug": "test-app-typescript",
+    "owner": "Dylane",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -12,6 +13,8 @@
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
+    "plugins": [["expo-router"]],
+    "scheme": "myapp",
     "ios": {
       "supportsTablet": true
     },
