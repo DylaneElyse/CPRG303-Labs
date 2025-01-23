@@ -5,7 +5,7 @@ import { Link } from "expo-router";
 export default function samplePage() {
   return (
     <View style={styles.container}>
-      <Text>Page 2 (samplePage)</Text>
+      <Text>Page 2</Text>
       <IndexButton />
       <FruitButton />
     </View>
