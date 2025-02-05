@@ -1,11 +1,10 @@
 import { View, Text, StyleSheet } from "react-native";
 import { FruitButton, IndexButton } from "../components/buttonTemplate";
-import { Link } from "expo-router";
 
 export default function samplePage() {
   return (
     <View style={styles.container}>
-      <Text>Page 2</Text>
+      <Text style={styles.text}>Page 2</Text>
       <IndexButton />
       <FruitButton />
     </View>
@@ -20,4 +19,8 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     padding: 24,
   },
+  text: {
+    fontSize: 32,
+    marginBottom: 20,
+  }
 });

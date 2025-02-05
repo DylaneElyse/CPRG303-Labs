@@ -19,6 +19,7 @@ export default Increment;
 
 const styles = StyleSheet.create({
   buttonContainer: {
+    color: "green",
     flexDirection: "row",
     justifyContent: "space-between",
     width: "60%",

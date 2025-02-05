@@ -4,7 +4,7 @@ import { FruitButton, Lab3Button, SampleButton } from "../components/buttonTempl
 export default function Home() {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Welcome to my app. (Index Page)</Text>
+      <Text style={styles.title}>Welcome to my app</Text>
       <SampleButton />
       <FruitButton />
       <Lab3Button />

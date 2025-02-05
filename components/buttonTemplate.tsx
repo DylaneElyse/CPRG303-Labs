@@ -6,7 +6,7 @@ export function IndexButton() {
 
   return (
     <View style={styles.container}>
-      <Button title="Index Button" onPress={() => router.push("/")} />
+      <Button title="Index" onPress={() => router.push("/")} />
     </View>
   );
 }
@@ -16,7 +16,7 @@ export function SampleButton() {
 
   return (
     <View style={styles.container}>
-      <Button title="Sample Button" onPress={() => router.push("/samplePage")} />
+      <Button title="Sample" onPress={() => router.push("/samplePage")} />
     </View>
   );
 }
@@ -26,7 +26,7 @@ export function FruitButton() {
 
   return (
     <View style={styles.container}>
-      <Button title="Fruit List Button" onPress={() => router.push("/fruitList")} />
+      <Button title="Fruit List" onPress={() => router.push("/fruitList")} />
     </View>
   );
 }
@@ -36,7 +36,7 @@ export function Lab3Button() {
 
   return (
     <View style={styles.container}>
-      <Button title="Lab 3 Button" onPress={() => router.push("/Lab_3")} />
+      <Button title="Lab 3" onPress={() => router.push("/Lab_3")} />
     </View>
   );
 }

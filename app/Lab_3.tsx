@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { StyleSheet, Text, View, Button } from "react-native";
 import Increment from "../components/increment";
 import Decrement from "../components/decrement";
+import { IndexButton } from "../components/buttonTemplate";
 
 export default function Lab_3() {
   const [count, setCount] = useState(0);
@@ -11,9 +12,10 @@ export default function Lab_3() {
       <Text style={styles.counterText}>Lab 3</Text>
       <Text style={styles.counterText}>Counter: {count}</Text>
       <View style={styles.buttons}>
-        <Increment value={count} setValue={setCount} />
         <Decrement value={count} setValue={setCount} />
+        <Increment value={count} setValue={setCount} />
       </View>
+      <IndexButton />
     </View>
   );
 }
@@ -32,7 +34,7 @@ const styles = StyleSheet.create({
   buttons: {
     flexDirection: "row",
     justifyContent: "space-between",
-    width: "60%",
+    width: "50%",
     alignItems: "center",
   },
 });
