@@ -31,6 +31,15 @@ export function FruitButton() {
   );
 }
 
+export function Lab3Button() {
+  const router = useRouter();
+
+  return (
+    <View style={styles.container}>
+      <Button title="Lab 3 Button" onPress={() => router.push("/Lab_3")} />
+    </View>
+  );
+}
 
 const styles = StyleSheet.create({
   container: {

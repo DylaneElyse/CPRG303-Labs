@@ -1,5 +1,5 @@
 import { View, Text, StyleSheet } from "react-native";
-import { FruitButton, SampleButton } from "../components/buttonTemplate";
+import { FruitButton, Lab3Button, SampleButton } from "../components/buttonTemplate";
 
 export default function Home() {
   return (
@@ -7,6 +7,7 @@ export default function Home() {
       <Text style={styles.title}>Welcome to my app. (Index Page)</Text>
       <SampleButton />
       <FruitButton />
+      <Lab3Button />
     </View>
   );
 }
