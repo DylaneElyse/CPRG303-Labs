@@ -1,4 +1,4 @@
-import { Button, View, Text, FlatList } from "react-native";
+import { Button, View, Text, FlatList, StyleSheet, TouchableOpacity } from "react-native";
 import DestionationsList from "./constants/list_destionations";
 import { useState } from "react";
 
@@ -16,7 +16,7 @@ export default function Lab4(){
     const selectItem = (index: number) => {
         const selectedItem = destinations[index];
         // grabing the item from destination list by its index position
-        setSelectedDestinations([...selectedDestinations, selectedItem]);
+        setSelectedDestinations([selectedItem, ...selectedDestinations]);
         // To add an item to an array in React state without mutating it, we update the state by spreading the
         // existing selectedDestinations and adding the selectedItem.
         setDestinations(destinations.filter((item, i) => i !== index));
@@ -40,21 +40,21 @@ export default function Lab4(){
     // }
 
 
-    const Flight = ({id, location}:Flight) => (
+    const Flight = ({id, location, average_yearly_temperature, price}:Flight) => (
         <View>
-            <Text>
-                Flight #{id} to {location}
+            <Text style={styles.textSelectionOfFlights}>
+                Flight #{id} to {location} ({average_yearly_temperature}) for CA${price}.
             </Text>
         </View>
     );
 
     return (
         <View>
-            <Text>Unselected Items</Text>
             <FlatList
                 data={destinations}
                 renderItem={({item, index}) => (
-                    <>
+                <View style={styles.rowFlight}>
+                <View style={styles.listOfFlights} >
                     <Flight
                     // To know what are the properties from the 'destinations' list, it has to be declared
                     // explicitly with type Flight being announced as the items that will compose the list of <Flight>
@@ -62,26 +62,48 @@ export default function Lab4(){
                     location = {item.location}
                     price = {item.price}
                     average_yearly_temperature={item.average_yearly_temperature}/>
-                    <Button title={'\u2610'} onPress={() => selectItem(index)}></Button>
-                </>
+                    <TouchableOpacity onPress={() => selectItem(index)}>
+                        <Text style={{fontSize: 15}}>{" \u2610"}</Text>
+                    </TouchableOpacity> 
+                </View>
+                </View>
                 )}
             />
-            <Text>Selected Items</Text>
             <FlatList
                 data={selectedDestinations}
                 renderItem={({item, index}) => (
-                    <>
-                    <Flight
-                    id = {item.id}
-                    location = {item.location}
-                    price = {item.price}
-                    average_yearly_temperature={item.average_yearly_temperature}/>
-                    <Button title={"\u2705"} onPress={() => unselectItem(index)}/>
-                    </>
+                    <View style={styles.rowFlight}>
+                    <View style={styles.listOfFlights} >
+                        <Flight
+                        id = {item.id}
+                        location = {item.location}
+                        price = {item.price}
+                        average_yearly_temperature={item.average_yearly_temperature}/>
+                        <TouchableOpacity onPress={() => unselectItem(index)}>
+                            <Text>{"\u2705"}</Text>
+                        </TouchableOpacity> 
+                    </View>
+                    </View>
                 )}
             />
-            
-            <Text>Selected Items</Text>
         </View>
     )
 }
+
+const styles = StyleSheet.create ({
+    listOfFlights: {
+        flex: 1,
+        flexDirection: "row",
+        gap: 45,
+        fontSize: 10,
+        alignItems: "flex-start",
+        marginBottom: 3,
+    },
+    textSelectionOfFlights: {
+        fontSize: 15,
+        width: 330
+    },
+    rowFlight: {
+        marginTop: 20
+    }
+})
