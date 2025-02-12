@@ -1,10 +1,5 @@
 import { View, Text, StyleSheet } from "react-native";
-import {
-  FruitButton,
-  Lab3Button,
-  Lab4Button,
-  SampleButton,
-} from "../components/buttonTemplate";
+import { FruitButton, Lab3Button, SampleButton } from "../components/buttonTemplate";
 
 export default function Home() {
   return (
@@ -13,7 +8,6 @@ export default function Home() {
       <SampleButton />
       <FruitButton />
       <Lab3Button />
-      <Lab4Button />
     </View>
   );
 }
@@ -25,12 +19,14 @@ const styles = StyleSheet.create({
     alignItems: "center",
     padding: 24,
   },
-  title: {
-    fontSize: 64,
-    fontWeight: "bold",
-    textAlign: "center",
-  },
+    title: {
+      fontSize: 64,
+      fontWeight: "bold",
+      textAlign: "center",
+    },
 });
+
+
 
 // import { Button, StyleSheet, Text, View } from "react-native";
 // import { fruitList } from "../components/fruitList";
