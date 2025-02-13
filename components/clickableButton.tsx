@@ -2,12 +2,11 @@ import React, { useState } from 'react';
 import { TouchableOpacity, Text, StyleSheet, View } from 'react-native';
 
 
-export default function clickableButton() {
-// const clickableButton = () => {
+export default function ClickableButton() {
 const [isClicked, setIsClicked] = useState(false);
 
 const handlePress = () => {
-setIsClicked(!isClicked); // Toggle the clicked state
+setIsClicked(!isClicked); 
 };
 
 return (
@@ -16,7 +15,7 @@ return (
     onPress={handlePress}
     style={[
         styles.button,
-        isClicked && styles.buttonClicked, // Apply red background if clicked
+        isClicked && styles.buttonClicked, 
     ]}
     >
     <Text style={styles.buttonText}>X</Text>
@@ -32,18 +31,20 @@ justifyContent: 'center',
 alignItems: 'center',
 },
 button: {
-backgroundColor: 'blue', // Default background color
-padding: 15,
+height: 30,
+width: 30,
+backgroundColor: 'blue', 
 borderRadius: 5,
 alignItems: 'center',
 justifyContent: 'center',
 },
 buttonClicked: {
-backgroundColor: 'red', // Background color when clicked
+backgroundColor: 'red', 
 },
 buttonText: {
-color: 'white', // Text color
-fontSize: 20,
+fontWeight: 'bold',
+color: 'white', 
+fontSize: 12,
 },
 });
 
