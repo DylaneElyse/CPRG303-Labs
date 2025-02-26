@@ -50,6 +50,17 @@ export function Lab4Button() {
     </View>
   );
 }
+
+export function Lab5Button() {
+  const router = useRouter();
+
+  return (
+    <View style={styles.container}>
+      <Button title="Lab 5" onPress={() => router.push("/Lab_5")} />
+    </View>
+  );
+}
+
 const styles = StyleSheet.create({
   container: {
     backgroundColor: "#fff",
