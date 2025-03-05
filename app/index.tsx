@@ -1,5 +1,5 @@
 import { View, Text, StyleSheet } from "react-native";
-import { FruitButton, Lab3Button, Lab4Button, Lab5Button, SampleButton } from "../components/buttonTemplate";
+import { FruitButton, Lab3Button, Lab4Button, Lab5Button, Lab6Button, SampleButton } from "../components/buttonTemplate";
 
 export default function Home() {
   return (
@@ -10,6 +10,7 @@ export default function Home() {
       <Lab3Button />
       <Lab4Button/>
       <Lab5Button />
+      <Lab6Button />
     </View>
   );
 }
