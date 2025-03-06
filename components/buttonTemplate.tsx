@@ -72,7 +72,6 @@ export function Lab6Button() {
 }
 
 
-
 const styles = StyleSheet.create({
   container: {
     backgroundColor: "#fff",

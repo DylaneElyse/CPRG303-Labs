@@ -11,6 +11,7 @@ export default function Home() {
       <Lab4Button/>
       <Lab5Button />
       <Lab6Button />
+
     </View>
   );
 }
@@ -22,14 +23,12 @@ const styles = StyleSheet.create({
     alignItems: "center",
     padding: 24,
   },
-    title: {
-      fontSize: 64,
-      fontWeight: "bold",
-      textAlign: "center",
-    },
+  title: {
+    fontSize: 64,
+    fontWeight: "bold",
+    textAlign: "center",
+  },
 });
-
-
 
 // import { Button, StyleSheet, Text, View } from "react-native";
 // import { fruitList } from "../components/fruitList";
