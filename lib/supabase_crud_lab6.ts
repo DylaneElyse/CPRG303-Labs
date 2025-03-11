@@ -1,8 +1,8 @@
-import supabase from "./supabase";
+import supabase from "./supabase_lab6";
 
-const TABLE_NAME = "visitors";
+const TABLE_NAME = "lab7_table";
 
-export async function getVisitors() {
+export async function selectData () {
     let{data, error} = await supabase.from(TABLE_NAME).select("*");
     if (error){
         throw error;
