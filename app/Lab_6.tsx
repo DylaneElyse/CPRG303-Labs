@@ -1,6 +1,6 @@
 import { Text, View } from "react-native";
 import { useState, useEffect } from 'react';
-import { getVisitors } from "../lib/supabase_crud";
+import { selectData } from "../lib/supabase_crud_lab6";
 
 const Lab_6 = () => {
     // Supabase CRUD
@@ -10,7 +10,7 @@ const Lab_6 = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                    const data = await getVisitors();
+                    const data = await selectData();
                     setVisitors(data);
                     console.log("Fetched data: ", data);
                 } catch (error) {

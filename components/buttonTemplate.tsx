@@ -71,6 +71,15 @@ export function Lab6Button() {
   );
 }
 
+export function Lab7Button() {
+  const router = useRouter();
+
+  return (
+    <View style={styles.container}>
+      <Button title="Lab 7" onPress={() => router.push("/Lab_7")} />
+    </View>
+  );
+}
 
 const styles = StyleSheet.create({
   container: {
